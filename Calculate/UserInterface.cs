@@ -21,14 +21,16 @@ namespace Calculate
             System.Console.WriteLine("3) Calcular el factorial de un número");
             System.Console.WriteLine("4) Saber si un número es primo");
             System.Console.WriteLine("5) Imprimir la serie de Fibonacci");
-            System.Console.WriteLine("6) Salir del programa");
+            System.Console.WriteLine("0) Salir del programa");
         }
         public static int ReadMainMenuOption()
         {
-
-            int option1;
-            option1 = System.Convert.ToInt32(System.Console.ReadLine());
-            return option1;
+            while (true)
+            {
+                int option1;
+                option1 = System.Convert.ToInt32(System.Console.ReadLine());
+                return option1;
+            }
         }
     }
 }

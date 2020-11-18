@@ -4,7 +4,7 @@ namespace Calculate
 {
     class Program
     {
-            public static void Main(string[] args)
+            public static void Main(string[] arg)
             {
                 UserInterface.PrintHeadMenu();
                 UserInterface.PrintMainMenu();
@@ -12,7 +12,7 @@ namespace Calculate
                 switch (option)
                 {
                     case 1:
-                        ModelViewConsole.Power2();
+                            ModelViewConsole.Power2(option);
                         break;
                 }
             }
