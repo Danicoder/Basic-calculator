@@ -7,6 +7,18 @@ namespace Calculate
     class UserInterface
     {
 
+        public static void PrintSumatory ()
+        {
+            System.Console.WriteLine("-----------------");
+            System.Console.WriteLine("Sumatorio de un número");
+            System.Console.WriteLine("-----------------");
+        }
+        public static void PrintOption1 ()
+        {
+            System.Console.WriteLine("-----------------");
+            System.Console.WriteLine("Potencia en base 2");
+            System.Console.WriteLine("-----------------");
+        }
         public static void PrintHeadMenu()
         {
             System.Console.WriteLine("-----------------");
