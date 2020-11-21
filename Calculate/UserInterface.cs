@@ -25,12 +25,17 @@ namespace Calculate
         }
         public static int ReadMainMenuOption()
         {
-            while (true)
+            try
             {
                 int option1;
                 option1 = System.Convert.ToInt32(System.Console.ReadLine());
                 return option1;
             }
+            catch
+            {
+                return -1;
+            }
+
         }
     }
 }

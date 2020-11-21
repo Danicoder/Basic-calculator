@@ -7,8 +7,10 @@ namespace Calculate
     class ModelViewConsole
     {
         //potencia en base 2
-        public static double Power2(double n)
+        public static double Power2(int n)
         {
+            System.Console.WriteLine("¿Cúal número quieres calcular?");
+            n = System.Convert.ToInt32(System.Console.ReadLine());
             if (n >= 0)
             {
                 double result = 1.0;
