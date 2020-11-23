@@ -7,16 +7,10 @@ namespace Calculate
     class ModelViewConsole
     {
         //potencia en base 2
-
-        public static double Power2(int n)
-        {
-            System.Console.WriteLine("¿Cúal número quieres calcular?");
-            n = System.Convert.ToInt32(System.Console.ReadLine());
-
-        public static void Power2()
+        public static void ManagePower2()
         {
             UserInterface.PrintOption1();
-            System.Console.WriteLine("introduce los numeros que deseas calcular");
+            System.Console.WriteLine("Teclea los números que deseas calcular");
             int n=UserInterface.ReadMainMenuOption();
 
             if (n >= 0)
@@ -37,12 +31,36 @@ namespace Calculate
         public static void ManageSumatory ()
         {
             UserInterface.PrintSumatory();
-            System.Console.WriteLine("introduce el numero que deseas sumar");
+            System.Console.WriteLine("Teclea el número que deseas sumar");
             int number = UserInterface.ReadMainMenuOption();
             for (int i = 1; number >= i; i++)
             {
                 System.Console.Write("+"+i);
             }
+        }
+        public static void LaunchFactorialNumber()
+        {
+            UserInterface.PrintFactorial();
+            System.Console.WriteLine("Teclea el número que deseas factorizar");
+            int number = UserInterface.ReadMainMenuOption();
+            if (number == 0) System.Console.Write("0! = 1"); //puesto que 0!=1
+            for (int i= 0; number > i; i++)
+            {
+
+                System.Console.Write("x"+i);
+            }
+            if(number < 0) System.Console.Write("No se puede calcular el factorial de un número negativo");
+        }
+        public static void ManageIsPrime()
+        {
+            UserInterface.PrintPrimeNumber();
+            System.Console.WriteLine("¿Cúal número quieres saber sí es primo o no? Teclealo");
+            int number= UserInterface.ReadMainMenuOption();
+            if((number % number) == 0 || (number % 1) == 0)
+            {
+
+            }
+
         }
     }
 }
