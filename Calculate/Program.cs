@@ -12,10 +12,13 @@ namespace Calculate
                 switch (option)
                 {
                     case 1:
-                            ModelViewConsole.Power2();
+                            ModelViewConsole.ManagePower2();
                         break;
                     case 2:
                             ModelViewConsole.ManageSumatory();
+                        break;
+                    case 3:
+                        ModelViewConsole.LaunchFactorialNumber();
                         break;
                 }
             }
