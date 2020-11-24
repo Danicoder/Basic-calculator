@@ -53,15 +53,27 @@ namespace Calculate
         }
         public static void ManageIsPrime()
         {
-            UserInterface.PrintPrimeNumber();
+            UserInterface.PrintPrime();
             System.Console.WriteLine("¿Cúal número quieres saber sí es primo o no? Teclealo");
             int number= UserInterface.ReadMainMenuOption();
-            if((number % number) == 0 || (number % 1) == 0)
+            
+            if (number != 0 || number > 0)
             {
-
+                if ((number % number) == 0 && (number % 1) == 0)
+                {
+                    System.Console.WriteLine("Es primo");
+                }
+                else
+                {
+                    System.Console.WriteLine("No es primo");
+                    System.Console.ReadLine();
+                }
+                
             }
-
+            if (number < 0 || number == 0) System.Console.WriteLine("Los números negativos o menores a cero no son primos");
+            UserInterface.ExitProgram();
         }
+
     }
 }
 

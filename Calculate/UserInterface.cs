@@ -9,9 +9,12 @@ namespace Calculate
 
         /*Esta clase sirve para dar opociones e imprimir por pantalla
          MVC: Muestra el menu, lo lee y lo ejecuta*/
-        public static void PrintSumatory ()
-
-
+        public static void PrintPrime()
+        {
+            System.Console.WriteLine("----------------------");
+            System.Console.WriteLine("Número Primo");
+            System.Console.WriteLine("----------------------");
+        }
         public static void PrintFactorial()
 
         {
@@ -51,15 +54,28 @@ namespace Calculate
         {
             try
             {
-                int option1;
-                option1 = System.Convert.ToInt32(System.Console.ReadLine());
-                return option1;
+                int UserOption;
+                UserOption = System.Convert.ToInt32(System.Console.ReadLine());
+                return UserOption;
             }
             catch
             {
                 return -1;
             }
+        }
+        public static void ExitProgram ()
+        {
+            System.Console.WriteLine("Si deseas salir del programa pulsa 0 \nde lo contrario escribe: volver");
+            string Choice = System.Console.ReadLine();
+            string BackTo = ("volver");
+            string exit = "0";
 
+            if (Choice == BackTo)
+            {
+                PrintMainMenu();
+                ReadMainMenuOption();
+            }
+            else if (Choice == exit) return;
         }
     }
 }
