@@ -6,7 +6,12 @@ namespace Calculate
 {
     class UserInterface
     {
-
+        public static void PrintPrimeNumber()
+        {
+            System.Console.WriteLine("------------");
+            System.Console.WriteLine("Número primo");
+            System.Console.WriteLine("------------");
+        }
         public static void PrintFactorial()
         {
             System.Console.WriteLine("----------------------");
@@ -32,6 +37,7 @@ namespace Calculate
             System.Console.WriteLine("--------------");
 
         }
+        /*Como para la mayoria de los casos son números naturales utilizamos int*/
         public static void PrintMainMenu()
         {
             System.Console.WriteLine("1) Potencia en base 2");
