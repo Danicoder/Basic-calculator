@@ -20,7 +20,14 @@ namespace Calculate
                     case 3:
                         ModelViewConsole.LaunchFactorialNumber();
                         break;
+                    case 4:
+                        ModelViewConsole.ManageIsPrime();
+                        break;
+                    case 0:
+                        UserInterface.ExitProgram();
+                        break;
                 }
+            
             }
     }
     
