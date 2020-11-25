@@ -10,10 +10,10 @@ namespace Calculate
         public static void PrintPrimeNumber()
         {
             System.Console.WriteLine("------------");
-            System.Console.WriteLine("Número primo");
+            System.Console.WriteLine("Série Fibonacci");
             System.Console.WriteLine("------------");
 
-
+        }
         /*Esta clase sirve para dar opociones e imprimir por pantalla
          MVC: Muestra el menu, lo lee y lo ejecuta*/
         public static void PrintPrime()
@@ -59,7 +59,7 @@ namespace Calculate
             System.Console.WriteLine("5) Imprimir la serie de Fibonacci");
             System.Console.WriteLine("0) Salir del programa");
         }
-        public static int ReadMainMenuOption()
+        public static int ReadOption()
         {
             try
             {
@@ -72,19 +72,13 @@ namespace Calculate
                 return -1;
             }
         }
-        public static void ExitProgram ()
+        //hacer una funcion para el título 12 líneas es con controles.?color..
+        public static void Decorado()
         {
-            System.Console.WriteLine("Si deseas salir del programa pulsa 0 \nde lo contrario escribe: volver");
-            string Choice = System.Console.ReadLine();
-            string BackTo = ("volver");
-            string exit = "0";
-
-            if (Choice == BackTo)
+            for (char f = '-'; f >= '-'; f++)
             {
-                PrintMainMenu();
-                ReadMainMenuOption();
+                
             }
-            else if (Choice == exit) return;
         }
     }
 }

@@ -6,28 +6,30 @@ namespace Calculate
     {
             public static void Main(string[] arg)
             {
-                UserInterface.PrintHeadMenu();
-                UserInterface.PrintMainMenu();
-                int option = UserInterface.ReadMainMenuOption();
-                switch (option)
+                for (; ; )
                 {
-                    case 1:
+                    UserInterface.PrintHeadMenu();
+                    UserInterface.PrintMainMenu();
+                    int option = UserInterface.ReadOption();
+                    switch (option)
+                    {
+                        case 1:
                             ModelViewConsole.ManagePower2();
-                        break;
-                    case 2:
+                            break;
+                        case 2:
                             ModelViewConsole.ManageSumatory();
-                        break;
-                    case 3:
-                        ModelViewConsole.LaunchFactorialNumber();
-                        break;
-                    case 4:
-                        ModelViewConsole.ManageIsPrime();
-                        break;
-                    case 0:
-                        UserInterface.ExitProgram();
-                        break;
+                            break;
+                        case 3:
+                            ModelViewConsole.LaunchFactorialNumber();
+                            break;
+                        case 4:
+                            ModelViewConsole.ManageIsPrime();
+                            break;
+                        case 0:
+                            
+                            break;
+                    }
                 }
-            
             }
     }
     
