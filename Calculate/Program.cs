@@ -15,6 +15,7 @@ namespace Calculate
                     {
                         case 1:
                             ModelViewConsole.ManagePower2();
+                            
                             break;
                         case 2:
                             ModelViewConsole.ManageSumatory();
@@ -26,8 +27,7 @@ namespace Calculate
                             ModelViewConsole.ManageIsPrime();
                             break;
                         case 0:
-                            
-                            break;
+                            return;
                     }
                 }
             }

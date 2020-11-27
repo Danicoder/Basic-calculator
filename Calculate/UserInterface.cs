@@ -73,12 +73,11 @@ namespace Calculate
             }
         }
         //hacer una funcion para el título 12 líneas es con controles.?color..
-        public static void Decorado()
+        public static void CollectResult()
         {
-            for (char f = '-'; f >= '-'; f++)
-            {
-                
-            }
+            int accompany = ReadOption();
+            
+
         }
     }
 }

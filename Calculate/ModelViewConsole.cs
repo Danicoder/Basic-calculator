@@ -10,25 +10,22 @@ namespace Calculate
         {
             UserInterface.PrintOption1();
             System.Console.WriteLine("Teclea los números que deseas calcular");
-            int n=UserInterface.ReadOption();
+            int UserNumber=UserInterface.ReadOption();
 
-            if (n >= 0)
+            if (UserNumber > 0 || UserNumber == 0)
             {
-                double result = 1.0;
-                for (int i = 0; i < n; i++)
-                    result *= 2;
-                System.Console.WriteLine("la solución es: "+result);
+                double Constant = 1.0;
+                for (int i = 0; i < UserNumber; i++)
+                    Constant *= 2;
+                System.Console.WriteLine("la solución es: "+Constant);
             }
             else
             {
                 double result = 1.0;
-                for (int i = 0; i < -n; i++)
+                for (int i = 0; i > UserNumber; i--)
                     result *= 2;
-                System.Console.WriteLine("la solución es: " + result);
+                    System.Console.WriteLine("la solución es: " + 1/result);
             }
-            System.Console.WriteLine();
-            System.Console.WriteLine("pulsa intro para regresar de nuevo al menu");
-            System.Console.ReadLine();
         }
         public static void ManageSumatory ()
         {
@@ -39,9 +36,10 @@ namespace Calculate
             {
                 System.Console.Write("+"+i);
             }
-            System.Console.WriteLine();
-            System.Console.WriteLine("pulsa intro para regresar de nuevo al menu");
-            System.Console.ReadLine();
+            for (int j= 0; number < j; j--)
+            {
+                System.Console.Write("+(-"+(-j)+")");
+            }
         }
         public static void LaunchFactorialNumber()
         {
@@ -55,9 +53,6 @@ namespace Calculate
                 System.Console.Write("x"+i);
             }
             if(number < 0) System.Console.Write("No se puede calcular el factorial de un número negativo");
-            System.Console.WriteLine();
-            System.Console.WriteLine("pulsa intro para regresar de nuevo al menu");
-            System.Console.ReadLine();
         }
         public static void ManageIsPrime()
         {
@@ -75,9 +70,6 @@ namespace Calculate
                         System.Console.WriteLine("Es primo");
                 }
                 if (number < 0 || number == 0) System.Console.WriteLine("Los numeros negativos y el cero, no son primos");
-                System.Console.WriteLine();
-                System.Console.WriteLine("pulsa intro para regresar de nuevo al menu");
-                System.Console.ReadLine();
             }
         }
 
