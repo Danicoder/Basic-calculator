@@ -41,43 +41,23 @@ namespace Calculate
             System.Console.WriteLine("------------------");
             System.Console.WriteLine("Potencia en base 2");
             System.Console.WriteLine("------------------");
+            //esplicar la potencia ne base dos
+            System.Console.WriteLine("Introduce un número");
         }
-        public static void PrintHeadMenu()
+        /*Como para la mayoria de los casos son números naturales utilizamos int*/
+        public static void PrintMainMenu()
         {
             System.Console.WriteLine("--------------");
             System.Console.WriteLine("Menú principal");
             System.Console.WriteLine("--------------");
 
-        }
-        /*Como para la mayoria de los casos son números naturales utilizamos int*/
-        public static void PrintMainMenu()
-        {
             System.Console.WriteLine("1) Potencia en base 2");
             System.Console.WriteLine("2) Sumatorio de un número");
-            System.Console.WriteLine("3) Calcular el factorial de un número"); //multiplicar todos los numeros enteros y positivos consecutivamente desde la unidad hasta el numero 
+            System.Console.WriteLine("3) Calcular el factorial de un número"); 
             System.Console.WriteLine("4) Saber si un número es primo");
             System.Console.WriteLine("5) Imprimir la serie de Fibonacci");
             System.Console.WriteLine("0) Salir del programa");
         }
-        public static int ReadOption()
-        {
-            try
-            {
-                int UserOption;
-                UserOption = System.Convert.ToInt32(System.Console.ReadLine());
-                return UserOption;
-            }
-            catch
-            {
-                return -1;
-            }
-        }
-        //hacer una funcion para el título 12 líneas es con controles.?color..
-        public static void CollectResult()
-        {
-            int accompany = ReadOption();
-            
-
-        }
+        
     }
 }
