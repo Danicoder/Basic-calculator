@@ -7,7 +7,7 @@ namespace Calculate
     class Utils
     {
 
-        public static int ReadOption()
+        public static int ReadInteger()
         {
             try
             {

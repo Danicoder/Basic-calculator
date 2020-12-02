@@ -6,7 +6,7 @@ namespace Calculate
 {
     class ModelViewConsole
     {
-        public static double ManagePower2(int Number)
+        public static double LaunchPower2(int Number)
         {
             if (Number > 0 || Number == 0)
             {
@@ -23,30 +23,28 @@ namespace Calculate
                 return (1 / result);
             }
         }
-        public static int ManageSumatory (int number)
+        //no hay números negativos porque en dicho caso se realizaría el valor absoluto del mismo.
+        public static int GiveSumatory(int Option)
         {
-            int result =0;
-            for (int i = 0; number > i; i++)
+            if(Option > 0)
             {
-                result += 1; 
+                int result = 0;
+                for (int j = 0; Option > j; j++)
+                {
+                    result += 1;
+                }
+                return result;
             }
-            return result;
         }
-        public static void LaunchFactorialNumber()
+        public static double LaunchFactorialNumber(int number)
         {
-            
-            if (number == 0) System.Console.Write("0! = 1"); //puesto que 0!=1
             for (int i= 0; number > i; i++)
             {
-                System.Console.Write("x"+i);
+                return i;
             }
-            if(number < 0) System.Console.Write("No se puede calcular el factorial de un número negativo");
         }
-        public static void ManageIsPrime()
+        public static void LaunchIsPrime(int number)
         {
-            UserInterface.PrintPrime();
-            System.Console.WriteLine("¿Cúal número quieres saber sí es primo o no? Teclealo");
-            int number= Utils.ReadOption();
             bool salir = true;
             if (salir == true)
             {

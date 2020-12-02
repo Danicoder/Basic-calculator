@@ -9,32 +9,49 @@ namespace Calculate
                 for (; ;)
                 {
                     UserInterface.PrintMainMenu();
-                    int option = Utils.ReadOption();
+                    int option = Utils.ReadInteger();
                     switch (option)
                     {
                         case 1:
                             System.Console.Clear();
-                            UserInterface.PrintOption1();
-                            int Number = Utils.ReadOption();
-                            double Result = ModelViewConsole.ManagePower2(Number);
-                            System.Console.WriteLine("El resultado es: "+ Result);
+                            UserInterface.PrintHeader1();
+                            int NumberUser = Utils.ReadInteger();
+                            double RiseTo = ModelViewConsole.LaunchPower2(NumberUser);
+                            System.Console.WriteLine("El resultado de "+ NumberUser + " = " + RiseTo);
                             System.Console.WriteLine("Teclea intro para ir al menu principal");
                             System.Console.ReadLine();
                             break;
                         case 2:
                             System.Console.Clear();
-                            UserInterface.PrintSumatory();
-                            int Option = Utils.ReadOption();
-                            double TournOn = ModelViewConsole.ManageSumatory(Option);
-                        System.Console.WriteLine("Teclea el número que deseas sumar");
-                        int number = Utils.ReadOption();
-                            ModelViewConsole.ManageSumatory();
+                            UserInterface.PrintHeader2();
+                            int OnlyOneNumber = Utils.ReadInteger();
+                            int Result = ModelViewConsole.GiveSumatory(OnlyOneNumber);
+                            System.Console.WriteLine("El resultado de " + OnlyOneNumber + " = " + Result);
+                            System.Console.WriteLine("Teclea intro para ir al menu principal");
+                            System.Console.ReadLine();
                             break;
                         case 3:
-                            ModelViewConsole.LaunchFactorialNumber();
+                            System.Console.Clear();
+                            UserInterface.PrintHeader3();
+                            int UserOption = Utils.ReadInteger();
+                            if (UserOption < 0) 
+                                System.Console.Write("No se puede calcular el factorial de un número negativo");
+                            if (UserOption == 0)
+                                System.Console.Write("0! = 1");
+                            else
+                            {
+                                double GiveAnswer = ModelViewConsole.LaunchFactorialNumber(UserOption);
+                                System.Console.Write("x" + GiveAnswer);
+                                System.Console.WriteLine("El resultado de " + UserOption + " = " + GiveAnswer);
+                            }
+                            System.Console.WriteLine("Teclea intro para ir al menu principal");
+                            System.Console.ReadLine();
                             break;
                         case 4:
-                            ModelViewConsole.ManageIsPrime();
+                            System.Console.Clear();
+                            UserInterface.PrintHeader3(); 
+                            int RequestUser = Utils.ReadInteger();
+                            ModelViewConsole.LaunchIsPrime(RequestUser);
                             break;
                         case 0:
                             return;
