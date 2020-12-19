@@ -6,7 +6,11 @@ namespace Calculate
 {
     class Utils
     {
-
+        /// <summary>
+        /// This function reads the option chosen by the user 
+        /// and if an invalid option is intruded, the user will be warned with a -1
+        /// </summary>
+        /// <returns>This function returns an integer</returns>
         public static int ReadInteger()
         {
             try
@@ -20,7 +24,13 @@ namespace Calculate
                 return -1;
             }
         }
-        //hacer una funcion para el título 12 líneas es con controles.?color..
-
+        /// <summary>
+        /// This function improves the visible appearance of the console with colour
+        /// </summary>
+        public static void PrinMenu()
+        {
+            System.Console.BackgroundColor = System.ConsoleColor.Cyan;
+            System.Console.ForegroundColor = System.ConsoleColor.Red;
+        }
     }
 }
