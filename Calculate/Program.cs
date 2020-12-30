@@ -51,7 +51,11 @@ namespace Calculate
                             UserInterface.PrintHeader4(); 
                             int NumberUser4 = Utils.ReadInteger();
                             bool ResultOption4 = ModelConsole.LaunchIsPrime(NumberUser4);
-                            System.Console.WriteLine("El  " + NumberUser4 + "  es  " + ResultOption4 + "\n");
+                            if(ResultOption4 == false)
+                            {
+                                System.Console.WriteLine("No es primo \n");
+                            }
+                            else System.Console.WriteLine("Es primo \n");
                             System.Console.WriteLine("Teclea intro para ir al menu principal");
                             System.Console.ReadLine();
                             System.Console.Clear();
@@ -77,7 +81,7 @@ namespace Calculate
                             }
                             break;
                         case 0:
-                        System.Console.WriteLine("¡Espero que te haya ayudado!\n GOOG LUCK");
+                        System.Console.WriteLine("¡Espero que te haya ayudado!\n GOOD LUCK");
                         System.Threading.Thread.Sleep(2000);
                         return;
                     }
